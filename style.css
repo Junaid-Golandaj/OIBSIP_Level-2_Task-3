@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Source Code Pro', monospace;
+}
+body{
+	height: 100vh;
+	background: #da7b7b;
+    background: linear-gradient(139deg,#03ddffcb 0%,#ff0381b6 90%);
+	background-image: url('pexels-pixabay-414660.jpg');
+	background-size: cover;
+}
+.container{
+	position: relative;
+	max-width: 800px;
+	padding: 80px;
+	margin: 50px auto;
+}
+.addTask{
+	width: 100%;
+	display: flex;
+	padding: 10px 0;
+}
+.addTask > input[type="text"]{
+	width: 100%;
+	color: rgb(0, 0, 0);
+	border:none;
+	border-bottom: 4px solid #666;
+	background: none;
+	padding: 10px;
+	font-size: 30px;
+	outline:none;
+}
+.addTask button{
+	margin: 0 10px;
+	background: #222;
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	padding:20px;
+	border:#da7b7b;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.notCompleted, .Completed{
+	margin: 5px 0;
+	padding: 30px;
+}
+h3{
+	font-size: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgb(101, 38, 38);
+}
+ol{
+	list-style:none;
+	counter-reset: my-counter;
+}
+ol li{
+	width: 100%;
+	padding: 18px;
+	margin: 20px 0;
+	background: linear-gradient(139deg,#ed7f7f9d 0%,#ff0000 90%);
+	font-size: 26px;
+	counter-increment: my-counter;
+	border-radius: 50px;
+}
+ol.Completed li{
+	background: linear-gradient(139deg,#d4fb37af 0%,#2bff00 90%);
+}
+ol li::before{
+	content: counter(my-counter);
+	background: #000000;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 3rem;
+	text-align: center;
+	color: rgb(255, 25, 0);
+	margin-right: 1rem;
+}
+li button{
+	float: right;
+	padding: 5px;
+	font-size: 40px;
+	line-height: 28px;
+	margin-right: 15px;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
